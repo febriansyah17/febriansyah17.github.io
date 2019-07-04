@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!--====== Required meta tags ======-->
+    <meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Fabelio Search Furniture</title> <!--====== Title ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css"><!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="assets/css/default.css"> <!--====== Default css ======-->
+    <link rel="stylesheet" href="assets/css/style.css"> <!--====== Style css ======-->
+    <link rel="stylesheet" href="assets/css/responsive.css"> <!--====== Responsive css ======-->
+</head>
+<body>
+    <!--====== HEADER PART START ======-->
+    <header class="header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                	<div class="input-group" >
+                        <div class="col-lg-6">
+                            <input id="search-products" type="text" onkeyup="searchBox();" class="search-furniture" placeholder="Search Furniture" >
+                        </div>
+                        <div class="col-lg-6">
+                        </div>
+                     </div>
+
+                    <div class="input-group" >
+                        <div class="col-lg-6">
+                            <!--SEARCH FURNITURE STYLE -->
+                            <form>
+							  	<div class="multiselect">
+								    <div class="selectBox" onclick="showCheckboxesStyle()">
+								      <select><option>Furniture Style</option></select>
+								      <div class="overSelect"></div>
+								    </div>
+								    <div id="checkstyle" class="checkboxes">
+								    	<label class="container-checkbox">Contemporary
+										  <input type="checkbox" name="furniture_style[]"  onclick="searchBox();" value="Contemporary">
+										  <span class="checkmark"></span>
+										</label>
+										<label class="container-checkbox">Modern
+										  <input type="checkbox" name="furniture_style[]" onclick="searchBox();" value="Modern">
+										  <span class="checkmark"></span>
+										</label>
+
+										<label class="container-checkbox">Scandinavian
+										  <input type="checkbox" name="furniture_style[]" onclick="searchBox();" value="Scandinavian">
+										  <span class="checkmark"></span>
+										</label>
+										<label class="container-checkbox">Classic
+										  <input type="checkbox" name="furniture_style[]" onclick="searchBox();" value="Classic">
+										  <span class="checkmark"></span>
+										</label>
+										<label class="container-checkbox">Midcentury
+										  <input type="checkbox" name="furniture_style[]" onclick="searchBox();" value="Midcentury">
+										  <span class="checkmark"></span>
+										</label>
+								    </div>
+							  	</div>
+							</form>
+                        </div>
+
+                        <!--SEARCH DELIVERY TIME -->
+                        <div class="col-lg-6">
+                        	<form>
+							  	<div class="multiselect">
+								    <div class="selectBox" onclick="showCheckboxes()">
+								      <select><option>Delivery Time</option></select>
+								      <div class="overSelect"></div>
+								    </div>
+								    <div id="checkdelivery" class="checkboxes">
+								    	<label class="container-checkbox">1 Week
+										  <input type="checkbox" name="delivery[]"  onclick="searchBox();" value="1 Week">
+										  <span class="checkmark"></span>
+										</label>
+										<label class="container-checkbox">2 Week
+										  <input type="checkbox" name="delivery[]" onclick="searchBox();" value="2 Week">
+										  <span class="checkmark"></span>
+										</label>
+
+										<label class="container-checkbox">1 Month
+										  <input type="checkbox" name="delivery[]" onclick="searchBox();" value="1 Month">
+										  <span class="checkmark"></span>
+										</label>
+										<label class="container-checkbox">More
+										  <input type="checkbox" name="delivery[]" onclick="searchBox();" value="More">
+										  <span class="checkmark"></span>
+										</label>
+								    </div>
+							  	</div>
+							</form>
+                        </div> <!-- col-lg-6 -->
+                    </div> <!-- input group -->
+                </div> <!-- col 12 -->
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </header>
+    <!--====== HEADER PART ENDS ======-->
+
+    <!--====== PRODUCT PART START ======-->
+    <div class="container pt-190">
+        <div class="row" id="dataproduct">
+            
+        </div> <!-- row -->
+    </div> <!-- container -->
+    
+    <!--====== PRODUCT PART ENDS ======-->
+
+    <!--====== FOOTER PART START ======-->
+    <section id="footer" class="footer-area">
+        <div class="container">
+            <div class="footer-copyright pt-15 pb-15">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copyright text-center">
+                            <p>Design by <a href="mailto:m.febriansyah17@gmail.com">Mochamad Febriansyah</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </section>
+    <!--====== FOOTER PART ENDS ======-->
+
+<!--====== JS PART ======-->   
+<script src="assets/js/jquery.min.js"></script>
+<script src="function.js"></script>
+</body>
+</html>
