@@ -1,0 +1,261 @@
+/*-----------------------------------------------------------------------------------
+    Template Name: Fabelio Search Furniture
+    Description: For Frontend Developer Test - Furniture Finder
+    Author: Mochamad Febriansyah (m.febriansyah17@gmail.com)
+    Date: July 2019
+-----------------------------------------------------------------------------------*/
+
+/*===========================
+    General css 
+===========================*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800");
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #777; }
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+img {max-width: 100%; }
+
+a:focus,
+input:focus,
+textarea:focus,
+button:focus {
+  text-decoration: none;
+  outline: none; }
+
+a:focus,
+a:hover {
+  text-decoration: none; }
+i,
+span,
+a {
+  display: inline-block; }
+h1,
+h2,
+h3,
+h4,
+h5 {font-family: "Poppins", sans-serif;font-weight: 600;color: #333;margin: 0px; }
+h1 {font-size: 92px; }
+h2 {font-size: 35px; }
+h3 {font-size: 32px; }
+h4 {font-size: 24px; }
+h5 {font-size: 20px; }
+h6 {font-size: 16px; color:#ffaa2e;font-weight: 600;}
+ul, ol {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none; }
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #777;
+  margin: 0px; }
+
+/*===========================
+    HEADER & SEARCH css 
+===========================*/
+.header-area {
+  padding: 30px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #106cc8;
+  z-index: 9; }
+.input-group{margin:10px 0;}
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #9b9b9b;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+/* Search Furniture / Products */
+.search-furniture {
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    color:#fff;
+    padding: 5px 0px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+    background-color: transparent;
+    border-width: 0px;
+    border-style: none;
+    border-bottom: 1px solid #ced4da;
+}
+.search-furniture::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+  opacity: 1; /* Firefox */
+}
+.search-furniture:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #fff;
+}
+.search-furniture::-ms-input-placeholder { /* Microsoft Edge */
+  color: #fff;
+}
+/* Multiselect dropdown */
+.multiselect {width: 100%;}
+.selectBox {position: relative;}
+.selectBox select {
+  width: 100%;
+  font-weight: bold;
+  height: calc(2.25rem + 2px);
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.checkboxes {
+  display: none;
+  border: 1px #dadada solid;
+  position: absolute;
+  z-index: 9999;
+  background-color: #fff;
+  padding: 15px;
+  width: 95%;
+}
+.checkboxes label {
+  display: block;
+}
+.container-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 5px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color:#000;
+}
+/* Hide the browser's default checkbox */
+.container-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border:solid #999 2px;
+}
+/* On mouse-over, add a Green background color */
+.container-checkbox:hover input ~ .checkmark {
+  background-color: #009688;
+}
+/* When the checkbox is checked, add a Green background */
+.container-checkbox input:checked ~ .checkmark {
+  background-color: #009688;
+  border:none;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Show the checkmark when checked */
+.container-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+/* Style the checkmark/indicator */
+.container-checkbox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 7px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* End Style Checkbox */
+
+/*===========================
+       CONTENT css 
+===========================*/
+.wfull{width:100%;float:left;}
+.product-box{
+    margin:20px 0px;
+    padding:30px;
+    float: left;
+    border: solid 1px #e0e0e0;
+    background-color: #fff;
+    box-shadow: 0px 2px 0px rgba(63, 63, 63, 0.6);
+    -moz-box-shadow: 10px 2px 0px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0px 2px 0px rgba(158, 158, 158, 0.6);
+    -o-box-shadow: 0px 2px 0px rgba(0,0,0,0.6);
+    border-radius: 5px;
+}
+.title-product{width:70%;float:left;color:#000;}
+.price-product{width:30%;float: left;text-align:right;}
+.description{width:100%;text-align:left;padding:10px 0;}
+.furniture-style{width:100%;text-align:left;padding:10px 0;color:#007bff;}
+.delivery-days{width:100%;text-align:right;font-weight:bold;}
+.underline{text-decoration: underline;color:#007bff;}
+
+/*===========================
+       FOOTER css 
+===========================*/
+.footer-area {position: relative;}
+.footer-area::before {
+  position: absolute;
+  content: '';
+  background-image: url(../images/footer-bg.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 100%;
+  height: 770px;
+  bottom: 0;
+  left: 0;
+  background-size: 100% 100%;
+  z-index: -1; 
+}
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .footer-area::before {height: 1450px;} 
+  }
+  @media (max-width: 767px) {
+    .footer-area::before {height: 1700px;} 
+  }
+.footer-copyright {border-top: 1px solid #ddd;}
+.footer-copyright a {color: #fe7865;}
+.footer-copyright .copyright p {color: #333; }
+  @media (max-width: 767px) {
+    .footer-copyright .copyright p {font-size: 14px;} 
+  }
