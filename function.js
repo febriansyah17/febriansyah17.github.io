@@ -1,6 +1,6 @@
 $(document).ready(function() {
      $.ajax({
-        url: "http://www.mocky.io/v2/5c9105cb330000112b649af8", data: "", dataType: 'json', success: function(rows)
+        url: "https://indoindians.com/api", data: "", dataType: 'json', success: function(rows)
         {
             //mengosongkan data localStorage
             localStorage.setItem("product","");
