@@ -1,6 +1,10 @@
 $(document).ready(function() {
      $.ajax({
+<<<<<<< HEAD
         url: "api.json", data: "", dataType: 'json', success: function(rows)
+=======
+        url: "https://indoindians.com/api", data: "", dataType: 'json', success: function(rows)
+>>>>>>> fecb0cc506150ae14fe318cce9ddbbb614d7e736
         {
             //mengosongkan data localStorage
             localStorage.setItem("product","");
